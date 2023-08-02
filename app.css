@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Public+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 8vw;
+}
+
+.nav {
+    background-color: rgba(255, 255, 255, 0.466);
+    width: 88vw;
+    height: 4vw;
+    border-radius: 40px;
+    border: solid #D7D7D7 1px;
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-first {
+    display: flex;
+    align-items: center;
+    width: 22vw;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.nav-first img {
+    height: 2vw;
+    margin-left: 2.5vw;
+}
+
+.nav-first p {
+    color: #5F6368;
+    font-size: 1.3vw;
+    margin-left: 1.5vw;
+}
+
+.mit {
+    height: 4.5vw;
+    margin-left: 2vw;
+}
+
+.nav-second {
+    width: 28vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Public Sans', sans-serif;
+    color: #5F6368;
+    font-size: 1.2vw;
+    letter-spacing: .5px;
+}
+
+.nav-second img {
+    height: 1.5vw;
+}
+
+.nav-second button {
+    all: unset;
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .nav-second {
+        width: 8vw;
+    }
+
+    .nav-second button {
+        display: inline;
+    }
+
+    .nav-second span {
+        display: none;
+    }
+
+    .mit {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+        height: 20vw;
+    }
+
+    .nav {
+        margin: 0;
+        height: 15vw;
+        width: 92vw;
+        margin-top: 5vw;
+    }
+
+    .nav-first {
+        width: 60vw;
+    }
+
+    .nav-first img {
+        height: 5vw;
+        margin: 0 3vw 0 6vw;
+    }
+
+    .nav-first p {
+        font-size: 4.5vw;
+    }
+
+    .nav-second {
+        width: 20vw;
+    }
+
+    .nav-second img {
+        height: 4vw;
+    }
+}
