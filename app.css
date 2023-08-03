@@ -59,26 +59,48 @@ header {
     letter-spacing: .5px;
 }
 
-.nav-second img {
+.nav button img {
     height: 1.5vw;
 }
 
-.nav-second button {
+.nav button {
     all: unset;
     display: none;
 }
 
-@media (max-width: 450px) {
+@media only screen and (max-width: 450px) {
+
+    body {
+        background-color: black;
+    }
+
     .nav-second {
         width: 8vw;
     }
 
-    .nav-second button {
+    .nav button {
         display: inline;
+        margin: 1vw 5vw 0 0;
+    }
+
+    .nav-second {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: grey;
+        position: absolute;
+        min-width: 88vw;
+        height: 50vw;
+        transform: translate(2vw, 38vw);
+        border: 1px solid white;
+        border-radius: 30px;
+        scale: 0.2;
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .nav-second span {
-        display: none;
+        font-size: 4vw;
     }
 
     .mit {
@@ -114,7 +136,12 @@ header {
         width: 20vw;
     }
 
-    .nav-second img {
+    .nav button img {
         height: 4vw;
+    }
+
+    .active {
+        opacity: 1;
+        scale: 1;
     }
 }

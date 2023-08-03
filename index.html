@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
+    
+
     <!-- Navigation Bar -->
     <header>
       <div class="nav">
@@ -15,12 +17,20 @@
           <p>GDSC MIT ADT</p>
         </div>
         <div class="nav-second">
-          <button><img src="images/setting.png" alt=""></button>
           <span>Home</span><span>About Us</span><span>Contact</span>
         </div>
+        <button onclick="toggleNav()"><img src="images/setting.png" alt=""></button>
       </div>
       <img class="mit" src="images/mit.png" alt="">
     </header>
 
+
+
+    <script>
+      function toggleNav() {
+        let navBar = document.querySelector(".nav-second")
+        navBar.classList.toggle("active")
+      }
+    </script>
   </body>
 </html>
