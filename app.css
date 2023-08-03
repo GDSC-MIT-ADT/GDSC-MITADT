@@ -3,19 +3,42 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-body {
+.green {
+    height: 40vw;
+    width: 40vw;
+    position: absolute;
+    background-color: rgba(15, 157, 86, 0.743);
+    filter: blur(150px);
+    border-radius: 25%;
+    top: -10vw;
+    right: -5vw;
+    z-index: -1;
+}
+
+.yellow {
+    height: 50vw;
+    width: 50vw;
+    position: absolute;
+    background-color: rgba(250, 188, 4, 0.736);;
+    filter: blur(150px);
+    border-radius: 25%;
+    bottom: -15vw;
+    left: -5vw;
+    z-index: -1;
 }
 
 header {
     display: flex;
     align-items: center;
     height: 8vw;
+    width: 100vw;
 }
 
 .nav {
-    background-color: rgba(255, 255, 255, 0.466);
+    background-color: rgba(255, 255, 255, 0.329);
     width: 88vw;
     height: 4vw;
     border-radius: 40px;
@@ -68,14 +91,28 @@ header {
     display: none;
 }
 
+
+
+
 @media only screen and (max-width: 450px) {
 
     body {
-        background-color: black;
+        overflow-x: hidden;
     }
 
-    .nav-second {
-        width: 8vw;
+    .green {
+        height: 100vw;
+        width: 70vw;
+        top: -15vw;
+        left: 30vw;
+        background-color: rgba(15, 157, 86, 0.894);
+    }
+
+    .yellow {
+        height: 120vw;
+        width: 120vw;
+        left: -30vw;
+        bottom: -5vw;
     }
 
     .nav button {
@@ -84,11 +121,12 @@ header {
     }
 
     .nav-second {
+        z-index: -1;
         opacity: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: grey;
+        background-color: rgba(255, 255, 255, 0.329);
         position: absolute;
         min-width: 88vw;
         height: 50vw;
@@ -109,7 +147,8 @@ header {
 
     header {
         justify-content: center;
-        height: 20vw;
+        height: 25vw;
+        width: 100vw;
     }
 
     .nav {
@@ -117,6 +156,7 @@ header {
         height: 15vw;
         width: 92vw;
         margin-top: 5vw;
+        border: solid white 1px;
     }
 
     .nav-first {
@@ -143,5 +183,6 @@ header {
     .active {
         opacity: 1;
         scale: 1;
+        z-index: 2;
     }
 }
