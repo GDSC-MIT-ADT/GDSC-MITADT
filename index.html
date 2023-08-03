@@ -18,7 +18,9 @@
           <p>GDSC MIT ADT</p>
         </div>
         <div class="nav-second">
-          <span>Home</span><span>About Us</span><span>Contact</span>
+          <span class="close">Home</span>
+          <span class="close1">About Us</span>
+          <span class="close2">Contact</span>
         </div>
         <button onclick="toggleNav()"><img src="images/setting.png" alt=""></button>
       </div>
@@ -43,10 +45,25 @@
 
     <!-- JavaScript -->
     <script>
-      function toggleNav() {
-        let navBar = document.querySelector(".nav-second")
+      let navBar = document.querySelector(".nav-second")
+      let close = document.querySelector(".close")
+      let close1 = document.querySelector(".close1")
+      let close2 = document.querySelector(".close2")
+
+      close.onclick = function() {
         navBar.classList.toggle("active")
       }
+      close1.onclick = function() {
+        navBar.classList.toggle("active")
+      }
+      close2.onclick = function() {
+        navBar.classList.toggle("active")
+      }
+
+      function toggleNav() {
+        navBar.classList.toggle("active")
+      }
+
     </script>
   </body>
 </html>

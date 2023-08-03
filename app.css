@@ -22,7 +22,7 @@
     height: 50vw;
     width: 50vw;
     position: absolute;
-    background-color: rgba(250, 188, 4, 0.736);;
+    background-color: rgba(250, 188, 4, 0.736);
     filter: blur(150px);
     border-radius: 25%;
     bottom: -15vw;
@@ -118,6 +118,8 @@ header {
     display: flex;
     margin-top: 3vw;
     align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
 }
 
 .imp {
@@ -129,7 +131,7 @@ header {
     width: 21.5vw;
     padding-left: 1vw;
     background-size: cover;
-    margin-left: 8vw;
+    margin-left: 4vw;
     color: white;
 }
 
@@ -159,7 +161,7 @@ header {
 
 .home-second img {
     height: 40vw;
-    transform: translateX(7vw);
+    transform: translateX(15vw);
 }
 
 
@@ -174,14 +176,15 @@ header {
         width: 70vw;
         top: -15vw;
         left: 30vw;
-        background-color: rgba(15, 157, 86, 0.894);
+        background-color: rgba(15, 157, 86, 0.493);
     }
 
     .yellow {
         height: 120vw;
         width: 120vw;
         left: -30vw;
-        bottom: -5vw;
+        bottom: -20vw;
+        background-color: rgba(250, 188, 4, 0.408);
     }
 
     .nav button {
@@ -195,19 +198,29 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.329);
+        background-color: #9edbbc;
         position: absolute;
         min-width: 88vw;
-        height: 50vw;
+        height: 55vw;
         transform: translate(2vw, 38vw);
         border: 1px solid white;
         border-radius: 30px;
         scale: 0.2;
-        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .nav-second span {
         font-size: 4vw;
+        width: 80vw;
+        height: 14vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-second span:hover {
+        background-color: white;
+        border-radius: 20px;
     }
 
     .mit {
@@ -282,14 +295,15 @@ header {
     }
 
     .home-second img {
-        margin-top: 10vw;
+        margin-top: 6vw;
         height: 68vw;
+        transform: translateX(5vw);
     }
 
     .imp {
         height: 41.4vw;
         width: 43vw;
-        margin-top: 4vw;
+        margin-top: 2vw;
     }
 
     .imp h2 {
