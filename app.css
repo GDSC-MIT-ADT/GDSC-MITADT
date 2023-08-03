@@ -91,7 +91,76 @@ header {
     display: none;
 }
 
+.home {
+    width: 100vw;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
 
+.home-title {
+    margin-top: 2vw;
+    font-size: 4vw;
+    letter-spacing: 7px;
+    font-weight: 500;
+}
+
+.home-para {
+    color: #7B7B7B;
+    width: 50vw;
+    font-size: 2vw;
+    margin: 1vw 35vw 0 0;
+    letter-spacing: 2px;
+}
+
+.home-second {
+    display: flex;
+    margin-top: 3vw;
+    align-items: center;
+}
+
+.imp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('images/imp.png');
+    height: 20.7vw;
+    width: 21.5vw;
+    padding-left: 1vw;
+    background-size: cover;
+    margin-left: 8vw;
+    color: white;
+}
+
+.imp h2 {
+    margin-top: 3.5vw;
+    font-size: 2vw;
+    width: 17vw;
+}
+
+.imp p {
+    font-size: 1.5vw;
+    width: 17vw;
+    margin: .4vw 0 0 .5vw;
+}
+
+.imp .button {
+    margin-top: 1.6vw;
+    width: 17vw;
+    height: 3vw;
+    background-color: #B58600;
+    border-radius: 15px;
+    font-size: 1.3vw;
+    text-align: center;
+    padding-top: 1vw;
+    font-weight: 600;
+}
+
+.home-second img {
+    height: 40vw;
+    transform: translateX(7vw);
+}
 
 
 @media only screen and (max-width: 450px) {
@@ -155,7 +224,6 @@ header {
         margin: 0;
         height: 15vw;
         width: 92vw;
-        margin-top: 5vw;
         border: solid white 1px;
     }
 
