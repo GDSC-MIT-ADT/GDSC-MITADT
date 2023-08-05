@@ -341,6 +341,20 @@ header {
     transform: translateX(5vw);
   }
 
+  @keyframes flip {
+    0% {
+      transform: rotateY(180deg);
+      scale: .2;
+    }
+    90% {
+      transform: rotateY(0deg);
+      scale: 1;
+    }
+    100% {
+      transform: translateX(5vw);
+    }
+  }
+
   .imp {
     height: 41.4vw;
     width: 43vw;
@@ -349,7 +363,7 @@ header {
 
   .imp h2 {
     margin-top: 7vw;
-    font-size: 4vw;
+    font-size: 3.5vw;
     width: 34vw;
   }
 
