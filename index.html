@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GDSC MIT ADT</title>
     <link rel="stylesheet" href="app.css" />
+    <link rel="icon" href="images/GDSC-LOGO.png" type="image/icon type">
   </head>
   <body>
     <!---------------- Animated Background Circles -------------->
     <div class="green"></div>
     <div class="yellow"></div>
     <!------------------ Navigation Bar ------------------->
-    <header>
+    <header class="header">
       <div class="nav">
         <div class="nav-first">
           <img src="images/GDSC-LOGO.png" alt="" />
           <p>GDSC MIT ADT</p>
         </div>
         <div class="nav-second">
-          <span onclick="toggleNav()">Home</span>
-          <span onclick="toggleNav()">About Us</span>
-          <span onclick="toggleNav()">Contact</span>
+          <span onclick="toggleNav()"><a href="#home">Home</a></span>
+          <span onclick="toggleNav()"><a href="#aboutus">About Us</a></span>
+          <span onclick="toggleNav()"><a href="#contact">Contact</a></span>
         </div>
         <button onclick="toggleNav()">
           <img src="images/setting.png" alt="" />
@@ -30,17 +31,16 @@
     </header>
 
     <!--------------------- Home Page ------------------->
-    <div class="home">
+    <div class="home" id="home">
       <h1 class="home-title">Google Developer Student Clubs</h1>
       <p class="home-para">
-        learn mobile and web development skills, design thinking and internship
-        skills.
+        learn mobile app development, enhance your technical skills, get networking opportunities and more
       </p>
       <div class="home-second">
         <div class="imp">
           <h2>We're Recruiting</h2>
           <p>2023-2024</p>
-          <div class="button">Register Here</div>
+          <div class="button"><a href="https://forms.gle/Aw3BJLJgWXXK141W7" target="_blank">Register Here</a></div>
         </div>
         <img id="logo1" src="images/GDSC-LOGO.png" alt="" />
         <img id="logo2" src="images/gdsc-logo2.png" alt="" />
@@ -48,7 +48,7 @@
     </div>
 
     <!----------------------- About Us -------------------------->
-    <h1 class="memory-lane">Running Down The Memory Lane</h1>
+    <h1 class="memory-lane" id="aboutus">Running Down The Memory Lane</h1>
     <section class="about" id="twenty-three">
       <div class="about-first">
         <h3>GDSC Chapter</h3>
@@ -110,7 +110,7 @@
     </section>
 
     <!----------------------- Footer ---------------------->
-    <footer>
+    <footer id="contact">
       <div class="first-section">
         <img src="images/footerlogo.png" alt="" />
         <div class="associate">
@@ -143,12 +143,10 @@
       <div class="second-section">
         <p>Copyright © 2023 All Rights Reserved.</p>
         <div>
-          <img src="images/twitter.png" alt="" />
-          <img src="images/instagram.png" alt="" />
-          <img src="images/linkedin.png" alt="" />
-          <img src="images/gmail.png" alt="" />
-          <img src="images/telegram.png" alt="" />
-          <img src="images/discord.png" alt="" />
+          <a href="https://www.instagram.com/gdsc.mitadt/" target="_blank"><img src="images/instagram.png" alt="" /></a>
+          <a href="https://www.linkedin.com/company/gdsc-mitadt/mycompany/" target="_blank"><img src="images/linkedin.png" alt="" /></a>
+          <a href="mailto:gdscmitadt@gmail.com" target="_blank"><img src="images/gmail.png" alt="" /></a>
+          <a href="https://discord.gg/Vnwn2RAQzw" target="_blank"><img src="images/discord.png" alt="" /></a>
         </div>
       </div>
     </footer>
@@ -160,11 +158,13 @@
       let year1 = document.querySelector(".twenty-two");
       let arrow1 = document.getElementById("one");
       let arrow2 = document.getElementById("two");
+      let header = document.querySelector(".header");
       let x1 = true;
       let x2 = true;
 
       function toggleNav() {
         navBar.classList.toggle("active");
+        header.classList.toggle("expand");
       }
 
       function toggleAbout(num) {
