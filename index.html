@@ -18,9 +18,9 @@
           <p>GDSC MIT ADT</p>
         </div>
         <div class="nav-second">
-          <span class="close">Home</span>
-          <span class="close1">About Us</span>
-          <span class="close2">Contact</span>
+          <span onclick="toggleNav()">Home</span>
+          <span onclick="toggleNav()">About Us</span>
+          <span onclick="toggleNav()">Contact</span>
         </div>
         <button onclick="toggleNav()">
           <img src="images/setting.png" alt="" />
@@ -42,9 +42,59 @@
           <p>2023-2024</p>
           <div class="button">Register Here</div>
         </div>
-        <img src="images/GDSC-LOGO.png" alt="" />
+        <img id="logo1" src="images/GDSC-LOGO.png" alt="" />
+        <img id="logo2" src="images/gdsc-logo2.png" alt="">
       </div>
     </div>
+
+    <!-- About Us -->
+    <h1 class="memory-lane">Running Down The Memory Lane</h1>
+    <section class="about">
+      <div class="about-first">
+        <h3>GDSC Chapter</h3>
+        <div>
+          <h1>2022 - 2023</h1>
+          <button onclick="toggleAbout()">
+            <img id="arrow" src="images/arrow.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="about-second">
+
+        <div class="events">
+          <div class="sub-events">
+            <h3>TRIWIZARD</h3>
+            <h2>WEB CAMPAIGN</h2>
+            <img src="images/web-logo.png" alt="">
+          </div>
+        </div>
+
+        <div class="events">
+          <div class="sub-events">
+            <h3>THE</h3>
+            <h2>FLUTTER CAMPAIGN</h2>
+            <img src="images/flutter-logo.png" alt="">
+          </div>
+        </div>
+
+        <div class="events">
+          <div class="sub-events">
+            <h3>GOOGLE CLOUD</h3>
+            <h2>CAREER PRACTITIONER</h2>
+            <img src="images/cloud-logo.png" alt="">
+          </div>
+        </div>
+
+        <div class="events">
+          <div class="sub-events">
+            <h3>JETPACK</h3>
+            <h2>COMPOSE CAMPS</h2>
+            <img src="images/web-logo.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -93,22 +143,23 @@
     <!-- JavaScript -->
     <script>
       let navBar = document.querySelector(".nav-second");
-      let close = document.querySelector(".close");
-      let close1 = document.querySelector(".close1");
-      let close2 = document.querySelector(".close2");
-
-      close.onclick = function () {
-        navBar.classList.toggle("active");
-      };
-      close1.onclick = function () {
-        navBar.classList.toggle("active");
-      };
-      close2.onclick = function () {
-        navBar.classList.toggle("active");
-      };
+      let about = document.querySelector(".about-second");
+      let arrow = document.getElementById("arrow");
+      let x = true;
 
       function toggleNav() {
         navBar.classList.toggle("active");
+      }
+
+      function toggleAbout() {
+        about.classList.toggle("open");
+        if (x == true) {
+          arrow.style.transform = "rotate(180deg)";
+          x = false
+        } else {
+          arrow.style.transform = "rotate(0deg)";
+          x = true
+        }
       }
     </script>
   </body>
