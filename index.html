@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <!-- Animated Background Circles -->
+    <!---------------- Animated Background Circles -------------->
     <div class="green"></div>
     <div class="yellow"></div>
-    <!-- Navigation Bar -->
+    <!------------------ Navigation Bar ------------------->
     <header>
       <div class="nav">
         <div class="nav-first">
@@ -29,7 +29,7 @@
       <img class="mit" src="images/mit.png" alt="" />
     </header>
 
-    <!-- Home Page -->
+    <!--------------------- Home Page ------------------->
     <div class="home">
       <h1 class="home-title">Google Developer Student Clubs</h1>
       <p class="home-para">
@@ -43,29 +43,43 @@
           <div class="button">Register Here</div>
         </div>
         <img id="logo1" src="images/GDSC-LOGO.png" alt="" />
-        <img id="logo2" src="images/gdsc-logo2.png" alt="">
+        <img id="logo2" src="images/gdsc-logo2.png" alt="" />
       </div>
     </div>
 
-    <!-- About Us -->
+    <!----------------------- About Us -------------------------->
     <h1 class="memory-lane">Running Down The Memory Lane</h1>
-    <section class="about">
+    <section class="about" id="twenty-three">
+      <div class="about-first">
+        <h3>GDSC Chapter</h3>
+        <div>
+          <h1>2023 - 2024</h1>
+          <button onclick="toggleAbout(2)">
+            <img class="arrow" id="two" src="images/arrow.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="about-second twenty-three">
+        <h1 id="coming-soon">Coming Soon !!!</h1>
+      </div>
+    </section>
+
+    <section class="about" id="twenty-two">
       <div class="about-first">
         <h3>GDSC Chapter</h3>
         <div>
           <h1>2022 - 2023</h1>
-          <button onclick="toggleAbout()">
-            <img id="arrow" src="images/arrow.png" alt="" />
+          <button onclick="toggleAbout(1)">
+            <img class="arrow" id="one" src="images/arrow.png" alt="" />
           </button>
         </div>
       </div>
-      <div class="about-second">
-
+      <div class="about-second twenty-two">
         <div class="events">
           <div class="sub-events">
             <h3>TRIWIZARD</h3>
             <h2>WEB CAMPAIGN</h2>
-            <img src="images/web-logo.png" alt="">
+            <img src="images/web-logo.png" alt="" />
           </div>
         </div>
 
@@ -73,7 +87,7 @@
           <div class="sub-events">
             <h3>THE</h3>
             <h2>FLUTTER CAMPAIGN</h2>
-            <img src="images/flutter-logo.png" alt="">
+            <img src="images/flutter-logo.png" alt="" />
           </div>
         </div>
 
@@ -81,7 +95,7 @@
           <div class="sub-events">
             <h3>GOOGLE CLOUD</h3>
             <h2>CAREER PRACTITIONER</h2>
-            <img src="images/cloud-logo.png" alt="">
+            <img src="images/cloud-logo.png" alt="" />
           </div>
         </div>
 
@@ -89,14 +103,13 @@
           <div class="sub-events">
             <h3>JETPACK</h3>
             <h2>COMPOSE CAMPS</h2>
-            <img src="images/web-logo.png" alt="">
+            <img src="images/web-logo.png" alt="" />
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Footer -->
+    <!----------------------- Footer ---------------------->
     <footer>
       <div class="first-section">
         <img src="images/footerlogo.png" alt="" />
@@ -140,25 +153,39 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!------------------ JavaScript ------------------->
     <script>
       let navBar = document.querySelector(".nav-second");
-      let about = document.querySelector(".about-second");
-      let arrow = document.getElementById("arrow");
-      let x = true;
+      let year2 = document.querySelector(".twenty-three");
+      let year1 = document.querySelector(".twenty-two");
+      let arrow1 = document.getElementById("one");
+      let arrow2 = document.getElementById("two");
+      let x1 = true;
+      let x2 = true;
 
       function toggleNav() {
         navBar.classList.toggle("active");
       }
 
-      function toggleAbout() {
-        about.classList.toggle("open");
-        if (x == true) {
-          arrow.style.transform = "rotate(180deg)";
-          x = false
-        } else {
-          arrow.style.transform = "rotate(0deg)";
-          x = true
+      function toggleAbout(num) {
+        if (num == 2) {
+          year2.classList.toggle("open");
+          if (x2 == true) {
+            arrow2.style.transform = "rotate(180deg)";
+            x2 = false;
+          } else {
+            arrow2.style.transform = "rotate(0deg)";
+            x2 = true;
+          }
+        } else if (num == 1) {
+          year1.classList.toggle("open");
+          if (x1 == true) {
+            arrow1.style.transform = "rotate(180deg)";
+            x1 = false;
+          } else {
+            arrow1.style.transform = "rotate(0deg)";
+            x1 = true;
+          }
         }
       }
     </script>

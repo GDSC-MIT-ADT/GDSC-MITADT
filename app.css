@@ -274,7 +274,7 @@ header {
 
 .memory-lane {
   width: 70vw;
-  margin: 15vw 0 0 15vw;
+  margin: 20vw 0 10vw 15vw;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 3vw;
@@ -289,13 +289,29 @@ header {
   border-radius: 4vw;
   display: flex;
   flex-direction: column;
+}
+
+#twenty-three {
+  background-color: #0f9d562c;
+}
+
+#twenty-two {
   background-color: #ea44351c;
+}
+
+#twenty-three .about-first{
+  background-image: url('images/about-header2.png');
+  box-shadow: 10px 10px 30px #0f9d566c;
+}
+
+#twenty-two .about-first{
+  background-image: url('images/about-header.png');
+  box-shadow: 10px 10px 30px #ea44355b;
 }
 
 .about-first {
   width: 90vw;
   height: 17vw;
-  background-image: url('images/about-header.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -303,7 +319,6 @@ header {
   justify-content: center;
   color: white;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 10px 10px 30px #ea44355b;
   border-radius: 4vw;
 }
 
@@ -335,12 +350,12 @@ header {
   transform: translateY(4vw);
 }
 
-#arrow {
+.arrow {
   height: 3.5vw;
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#arrow:hover {
+.arrow:hover {
   cursor: pointer;
 }
 
@@ -496,6 +511,15 @@ footer {
 .second-section img:hover {
   cursor: pointer;
   scale: 1.1;
+}
+
+#coming-soon {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #0F9D57;
+  font-size: 6vw;
+  letter-spacing: 2px;
+  margin-left: 3vw;
 }
 
 @media only screen and (max-width: 450px) {
@@ -713,7 +737,7 @@ footer {
     transform: translateY(7vw);
   }
   
-  #arrow {
+  .arrow {
     height: 5vw;
   }
 
